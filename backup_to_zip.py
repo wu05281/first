@@ -1,5 +1,5 @@
-import zipfile, os
-
+import zipfile, os, logging
+logging.basicConfig(filename='logs.txt', level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
 def back_to_zip(folder):
     # Backup the entire contents of "folder" into a ZIP file.
     folder = os.path.abspath(folder)  # make sure folder is absolute
@@ -14,7 +14,9 @@ def back_to_zip(folder):
             break
         number = number+1
     # Create the ZIP file.
-    print('Creating %s...' % zip_file_name)
+
+    logging.debug('Creating %s...' % zip_file_name)
+    #print('Creating %s...' % zip_file_name)
     backup_zip = zipfile.ZipFile(zip_file_name, 'w')
     #
     for folderName, subFolders, fileNames in os.walk(folder):

@@ -3,6 +3,8 @@ import os, shutil, re
 
 def choose_file(folder):
     folder = os.path.abspath(folder)
+    if not os.path.isdir(folder) :
+        return
     # 生成备份文件夹
     number = 1
     while True:
