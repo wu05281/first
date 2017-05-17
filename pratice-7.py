@@ -13,7 +13,7 @@ else:
 
 
 #密码强度检查正则表达式
-pwc = re.match(r'''
+pattern = re.compile(r'''
     (?=^.{8,18}$)                        #长度高于八位
     (?=(?:.*?\d){1})                     #至少包含一位数字
     (?=.*[a-z])                          #至少一位小写字母
@@ -21,7 +21,10 @@ pwc = re.match(r'''
     (?=(?:.*?[!@#$%*()_+^&}{:;?.]){1})   #至少一位特殊字符'!@#$%*()_+^&}{:;?.'
     (?!.*\s)                             #不包含任何空格
     [0-9a-zA-Z!@#$%*()_+^&]*$            
-    ''', 'sffs@800909W', re.VERBOSE)
+    ''', re.VERBOSE)
+#pwc = pattern.match('sffs@800909W')
+pwc = pattern.match('sffs@800909W')
+print(type(pwc))
 if pwc:
     print('ok')
 else:
