@@ -3,10 +3,10 @@ from email.mime.text import MIMEText
 from email.header import Header
 
 mail_Info = {
-    "from": "37809131@qq.com",
+    "from": "123123123@qq.com",
     "to": "wubo@paicaifu.com",
     "hostName": "smtp.qq.com",
-    "userName": "37809131",
+    "userName": "12323223",
     "password": "*************",
     "mailSubject": "test",
     "mailText": "hello world",
