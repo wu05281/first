@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # encoding=utf-8
 
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
 cat_im = Image.open('catlogo.png')
 width, height = cat_im.size
@@ -24,3 +24,8 @@ print('image file name:%s, format:%s, width:%s, height:%s' % (cat_im.filename, c
 # 翻转：翻转n度与镜像翻转
 # cat_im.rotate(90).save('90_zophie.png')
 # cat_im.transpose(Image.FLIP_LEFT_RIGHT).save('transpose_zophie.png')
+
+# 添加水印（文字）
+draw = ImageDraw.Draw(cat_im)
+draw.text((20, 150), 'hello world', fill='purple')
+cat_im.save('zophie_text.png')
