@@ -1,4 +1,4 @@
-#coding=utf-8
+# coding=utf-8
 import imapclient, sys, pyzmail
 
 imap_obj = imapclient.IMAPClient(host='imap.qq.com')
