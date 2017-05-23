@@ -22,5 +22,5 @@ im = Image.new('RGBA', (100, 200), 'purple')
 # cat_copy_im.save('copy_zophie.png')
 
 # 翻转：翻转n度与镜像翻转
-cat_im.rotate(90).save('90_zophie.png')
-cat_im.transpose(Image.FLIP_LEFT_RIGHT).save('transpose_zophie.png')
+# cat_im.rotate(90).save('90_zophie.png')
+# cat_im.transpose(Image.FLIP_LEFT_RIGHT).save('transpose_zophie.png')
