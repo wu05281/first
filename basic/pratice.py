@@ -32,4 +32,4 @@ class Student:
 
 if __name__ == '__main__':
     stu = Student(name='alex', age=20, language='cn')
-    print(s)
+    print(stu)
